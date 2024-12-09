@@ -7,7 +7,8 @@ const GamePage: React.FC = () => {
     const navigate = useNavigate();
 
     const handleClueSubmit = () => {
-        if (clue.toLowerCase() === 'GROSBIBIQUEJAIME') {
+        console.log(clue)
+        if (clue.toLowerCase() === 'grosbibiquejaime') {
             navigate('/reveal');
         } else {
             alert('Indice incorrect, essayez encore !');
