@@ -11,7 +11,7 @@ const GamePage: React.FC = () => {
         if (clue.toLowerCase() === 'grosbibiquejaime') {
             navigate('/reveal');
         } else {
-            alert('Indice incorrect, essayez encore !');
+            alert('Indice incorrect, essaye encore !');
         }
     };
 

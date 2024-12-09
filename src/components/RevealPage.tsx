@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Card, CardMedia, CardContent } from '@mui/material';
+import { Box, Typography, CardContent } from '@mui/material';
 
 const RevealPage: React.FC = () => {
     return (

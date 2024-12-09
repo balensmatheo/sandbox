@@ -18,11 +18,8 @@ const HomePage: React.FC = () => {
             <Typography variant="h2" gutterBottom>
                 Tu veux connaitre ton cadeau ?
             </Typography>
-            <Typography variant="h6" paragraph>
-                Cliquez sur le bouton ci-dessous pour commencer votre quête.
-            </Typography>
             <Button variant="contained" color="primary" size="large" onClick={() => navigate('/game')}>
-                Commencer l'aventure
+                Clique ici
             </Button>
         </Box>
     );
