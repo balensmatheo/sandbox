@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, CardContent } from '@mui/material';
+import {Image} from "@aws-amplify/ui-react";
 
 const RevealPage: React.FC = () => {
     return (
@@ -15,6 +16,7 @@ const RevealPage: React.FC = () => {
                Regarde dans ton doudou pingouin
             </Typography>
                 <CardContent>
+                    <Image src={"src/assets/pingouin.gif"} alt={"pingouin"} />
                 </CardContent>
         </Box>
     );

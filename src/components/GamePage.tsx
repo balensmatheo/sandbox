@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const GamePage: React.FC = () => {
     const [clue, setClue] = useState<string>('');
+    const [error, setError] = useState<boolean>(false);
     const navigate = useNavigate();
 
     const handleClueSubmit = () => {
@@ -11,7 +12,7 @@ const GamePage: React.FC = () => {
         if (clue.toLowerCase() === 'grosbibiquejaime') {
             navigate('/reveal');
         } else {
-            alert('Indice incorrect, essaye encore !');
+            setError(true);
         }
     };
 
@@ -28,14 +29,15 @@ const GamePage: React.FC = () => {
                 Entre le mot de passe ultra secret et tu sauras :)
             </Typography>
             <TextField
-                label="Entrez votre réponse ici"
+                error={error}
+                label={error ? 'Mauvais mot de passe' : 'Code ultra secret'}
                 variant="outlined"
                 value={clue}
                 onChange={(e) => setClue(e.target.value)}
                 sx={{ mb: 2, width: '300px' }}
             />
-            <Button variant="contained" color="primary" onClick={handleClueSubmit}>
-                Soumettre
+            <Button variant="contained" color="success" onClick={handleClueSubmit}>
+                Valider
             </Button>
         </Box>
     );
